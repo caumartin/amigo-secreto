@@ -6,6 +6,8 @@ const ingresoDeAmigo = document.getElementById('amigo');  // variable que contro
 
 const muestraAmigos = document.getElementById('listaAmigos'); // variable que controla el UL donde mostraremos los amigos ingresados
 
+const muestraGanador = document.getElementById('resultado');
+
 function agregarAmigo () {
 
         let amigoIngresado = ingresoDeAmigo.value;
@@ -19,6 +21,9 @@ function agregarAmigo () {
             listaDeAmigos.push(amigoIngresado);
             ingresoDeAmigo.value = '';
             console.log (listaDeAmigos);
+            const nuevoAmigo = document.createElement('li');
+            nuevoAmigo.innerHTML = amigoIngresado;
+            muestraAmigos.appendChild(nuevoAmigo);
 
         }
 
@@ -26,7 +31,10 @@ function agregarAmigo () {
 
 function sortearAmigo () {
 
-        numeroAleatorio = Math.floor(Math.random () * listaDeAmigos.length)
-        console.log (listaDeAmigos[numeroAleatorio])
+        numeroAleatorio = Math.floor(Math.random () * listaDeAmigos.length);
+        console.log (listaDeAmigos[numeroAleatorio]);
+        const amigoSorteado = document.createElement('li');
+        amigoSorteado.innerHTML = listaDeAmigos[numeroAleatorio];
+        muestraGanador.appendChild(amigoSorteado);       
 
 }
