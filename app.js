@@ -1,6 +1,3 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-
-
 // Variables
 
 let listaDeAmigos = [] // lista donde se guardaran los nombres ingresados
@@ -31,9 +28,7 @@ function agregarAmigo () {
                     listaDeAmigos.push(amigoIngresado); // caso contrario, agrego el amigo a la lista
                     ingresoDeAmigo.value = ''; // borro los caracteres del ingreso anterior
                     mostrarAmigo(amigoIngresado); // llamo a la función que mostrará el amigo ingresado
-//                    const nuevoAmigo = document.createElement('li'); // creo elemento LI para agregar amigo en el UL
-//                    nuevoAmigo.innerHTML = amigoIngresado; // asocio el nombre ingresado con el LI creado
-//                    muestraAmigos.appendChild(nuevoAmigo); // agrego el LI al UL
+
                 }
         } else { // si el sorteo ya terminó lo informo
 
